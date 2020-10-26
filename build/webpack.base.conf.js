@@ -35,15 +35,76 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: ['pug-loader']
-            },
-            {
+            }, {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
                 }
-            }
-        ]
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/'
+                }
+            }, {
+                test: /\.scss$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader, {
+                        loader: 'css-loader',
+                        options: { sourceMap: true }
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        'autoprefixer',
+                                        {
+                                            // Options
+                                        },
+                                    ],
+                                ],
+                            },
+                        },
+                    }, {
+                        loader: 'resolve-url-loader',
+                    }, {
+                        loader: 'sass-loader',
+                        options: { sourceMap: true }
+                    }
+                ],
+            }, {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: { sourceMap: true }
+                    }, {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            postcssOptions: {
+                                plugins: [
+                                    [
+                                        'autoprefixer',
+                                        {
+                                            // Options
+                                        },
+                                    ],
+                                ],
+                            },
+                        },
+                    },
+                ],
+            },
+        ],
     },
     plugins: [
         new CleanWebpackPlugin(),

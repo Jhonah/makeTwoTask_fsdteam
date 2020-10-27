@@ -1,4 +1,13 @@
+include mixins
+
 .store-header
   .store-header__text_center
-    h1.store-header__text_capitalize= 'our'
+    h1.store-header__text_capitalize= 'our '
       strong.store-header__banner-title= 'store'
+.row-wrapper
+  .store-list
+    +list('all')
+    +list('cakes')
+    +list('cupcakes')
+    +list('sweets')
+    +list('doughnuts')

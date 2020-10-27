@@ -1,24 +1,66 @@
 .h1, h1 {
     font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+b, strong {
+    font-weight: bolder;
 }
 
 .store-header {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     margin: 0 -15px 0 -15px;
 }
 
 .store-header__text_center {
-    //text-align: center;
-    //flex: 0 0 50%;
+    text-align: center;
+    flex: 0 0 50%;
     max-width: 50%;
 }
 
 .store-header__text_capitalize {
-    text-transform: capitalize;
+    text-transform: capitalize!important;
 }
 
 .store-header__banner-title {
-    color: #ef7998;
+    color: $mainPink;
     font-size: 4rem;
+    //line-height: 1.2;
+}
+
+.row-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.store-list {
+    flex: 0 0 66.666667%; // первое значение flex-grow, второе flex-shrink и последнее flex-basis
+    max-width: 66.666667%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.store-list__btn {
+    padding: .375rem .75rem;
+    text-align: center;
+    vertical-align: middle;
+    margin: .5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+    //user-select: none;
+    //white-space: nowrap;
+    border: 1px solid $mainBlack;
+    border-radius: .25rem;
+}
+
+.store-list__text_uppercase {
+    text-transform: uppercase;
+}
+
+.store-list__btn_black {
+    color: $mainBlack;
+    border-color: $mainBlack;
 }

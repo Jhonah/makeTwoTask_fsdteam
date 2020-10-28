@@ -43,7 +43,7 @@ body {
 
 .h1, .h2, .h3, .h4, .h5, .h6,
 h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+    margin                      : 0;
 }
 
 a {
@@ -62,15 +62,15 @@ section, .section {
     padding                     : 40px 0;
 
     @media screen and (max-width: $desktopWidth) {
-        padding: 36px 0;
+        padding                 : 36px 0;
     }
 
     @media screen and (max-width: $desktopWidth) {
-        padding: 28px 0;
+        padding                 : 28px 0;
     }
 
     @media screen and (max-width: $desktopWidth) {
-        padding: 20px 0;
+        padding                 : 20px 0;
     }
 }
 
@@ -104,6 +104,6 @@ section, .section {
     }
 }
 
-// Modules
+// Components
 @import "../components/header/header.scss";
 @import "../components/store/store.scss";

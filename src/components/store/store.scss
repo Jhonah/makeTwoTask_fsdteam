@@ -64,3 +64,8 @@ b, strong {
     color: $mainBlack;
     border-color: $mainBlack;
 }
+
+.store-list__btn_black:hover {
+    color: $mainPink;
+    background-color: $mainBlack;
+}

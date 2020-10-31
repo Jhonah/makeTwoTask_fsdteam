@@ -2,21 +2,18 @@ header
   .container
     nav.nav
       .nav-wrapper
-          ul.nav__list
-            li.nav__item.nav__item--current
-              a(href="./index.html", target="_self").nav__link.active= 'главная'
-            li.nav__item
-              a(href="./tassel.html").nav__link= 'купить кисточки'
-            li.nav__item
-              a(href="./tassel.html").nav__link= 'купить холсты'
-            li.nav__item
-              a(href="./tassel.html").nav__link= 'купить картины по номерам'
-            li.nav__item
-              a(href="./tassel.html").nav__link= 'о нас'
+          img.logo
+          .top-menu
+            include mixins
+            form.form
+              button.button.button_color_purple.button_border-color_purple
+                .button__title= "войти"              
+              button.button.button_color_white.button_back-color_purple
+                .button__title= "зарегистрироваться"
             //- li.nav__item
               //- ul.nav__list more
                 //- li.nav__item контакты
                 //- li.nav__item ЧаВо
                 //- li.nav__item блог
-            li.nav__item
-              img.nav__img(alt="корзина")
+            //- li.nav__item
+              //- img.nav__img(alt="корзина")

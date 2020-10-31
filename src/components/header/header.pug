@@ -1,13 +1,16 @@
+include mixins
+
 header
   .container
     nav.nav
       .nav-wrapper
           img.logo
           .top-menu
-            include mixins
+            //- include mixins
+            +nav-list
             form.form
               button.button.button_color_purple.button_border-color_purple
-                .button__title= "войти"              
+                .button__title= "войти"
               button.button.button_color_white.button_back-color_purple
                 .button__title= "зарегистрироваться"
             //- li.nav__item

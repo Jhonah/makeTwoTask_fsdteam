@@ -1,14 +1,19 @@
-ul.nav__list
-  li.nav__item.nav__item--current
-    a(href="./index.html", target="_self").nav__link.active= "о нас"
-  li.nav__item
-    a(href="./uslugi.html").nav__link= "услуги"
+mixin my-svg
+  .svg-position
     svg(viewBox="0 0 100 100" width="12" height="10.5")
       line.svg-color(x1="0" y1="30" x2="52" y2="82" stroke="black" stroke-width="20")
       line.svg-color(x1="52" y1="68" x2="90" y2="30" stroke="black" stroke-width="20")
-  li.nav__item
-    a(href="./vacancy.html").nav__link= "вакансии"
-  li.nav__item
-    a(href="./news.html").nav__link= "новости"
-  li.nav__item
-    a(href="./tassel.html").nav__link= "соглашения"
+mixin nav-list
+  ul.nav__list
+    li.nav__item.nav__item--current
+      a(href="./index.html", target="_self").nav__link.active= "о нас"
+    li.nav__item
+      a(href="./uslugi.html").nav__link= "услуги"
+      +my-svg
+    li.nav__item
+      a(href="./vacancy.html").nav__link= "вакансии"
+    li.nav__item
+      a(href="./news.html").nav__link= "новости"
+    li.nav__item
+      a(href="./tassel.html").nav__link= "соглашения"
+      +my-svg

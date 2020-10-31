@@ -23,19 +23,21 @@
 
 .top-menu {
     display: flex;
+    align-items: center;
     /*justify-content: space-between;*/
     flex: 0 0 66.3448275862%;
-    height: 34px;
+    //height: 34px;
 }
 
 
 .nav__list {
-    height: inherit;
-    flex: 0 0 447px;
+    //height: inherit;
+    //flex: 0 0 447px;
     display: flex;
+    vertical-align: text-top;
     /*flex-direction: row;
     justify-content: space-between;*/
-    align-items: center;
+    //align-items: center;
     font-family: 'Montserrat', serif;
     font-weight: 400;
     font-size: 14px;
@@ -50,6 +52,9 @@
 .nav__item {
     color: $darkShade50;
     padding-right: 1.25rem;
+    display: flex;
+    //flex-direction: row;
+    //align-items: flex-start;
 }
 
 .nav__item--current {
@@ -61,16 +66,25 @@
     color: inherit;
 }
 
+.svg-position {
+    width: 24px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .svg-color {
     //color: $darkShade50;
     stroke: $darkShade50;
 }
 
 .form {
+    width: 39.5%;
     height: 34px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 button {
@@ -78,11 +92,14 @@ button {
     font-family: inherit;
     border: 0;
     padding: 0;
+    color: $purple;
     background-color: #fff;
+    //padding-right: 1.25rem;
 }
 
 .button {
     height: 100%;
+    padding: .5625rem 1.25rem .625rem;
 }
 
 .button__title {
@@ -92,7 +109,6 @@ button {
     font-size: 12px;
     line-height: 14.63px;
     text-transform: uppercase;
-    padding: .5625rem 1.25rem .625rem;
 }
 
 .button_color_purple {

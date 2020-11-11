@@ -34,7 +34,7 @@
     //height: inherit;
     //flex: 0 0 447px;
     display: flex;
-    vertical-align: text-top;
+    //vertical-align: text-bottom;
     /*flex-direction: row;
     justify-content: space-between;*/
     //align-items: center;
@@ -66,12 +66,17 @@
     color: inherit;
 }
 
+.nav__link_text-transform_none {
+    text-transform: none;
+}
+
 .svg-position {
     width: 24px;
-    height: 21px;
+    height: 19px;
     display: flex;
     align-items: center;
     justify-content: center;
+    //vertical-align: text-bottom;
 }
 
 .svg-color {
@@ -94,16 +99,23 @@ button {
     padding: 0;
     color: $purple;
     background-color: #fff;
-    //padding-right: 1.25rem;
 }
 
 .button {
     height: 100%;
     padding: .5625rem 1.25rem .625rem;
+    border-color: linear-gradient(180deg, $purple 0%, $neo 100%);
+    border-radius: 22px;
+    border: 2px solid;
 }
 
+    .button_color_purple {
+        background: linear-gradient(180deg, $purple 0%, $neo 100%);
+        //border-radius: 22px;
+        border: none;
+    }
+
 .button__title {
-    //height: .5rem;
     font-family: 'Montserrat', serif;
     font-weight: 700;
     font-size: 12px;
@@ -111,24 +123,20 @@ button {
     text-transform: uppercase;
 }
 
-.button_color_purple {
-    color: $purple;
+    .button__title_color_white {
+        color: #fff;
+    }
+
+
+.show {
+    //display: none;
+    //position: relative;
+    //overflow: hidden;
 }
 
-.button_color_white {
-    color: #fff;
-}
-
-.button_border-color_purple {
-    border-color: linear-gradient(180deg, $purple 0%, $neo 100%);
-    border-radius: 22px;
-    border: 2px solid;
-}
-
-.button_back-color_purple {
-    background: linear-gradient(180deg, $purple 0%, $neo 100%);
-    border-radius: 22px;
-}
+/*.show {
+    display: block;
+}*/
 
 /*
 .nav__link:link {

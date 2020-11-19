@@ -3,6 +3,7 @@ node_modules/
 
 # Folders
 dist/
+background-images/
 
 # Files
 .DS_Store

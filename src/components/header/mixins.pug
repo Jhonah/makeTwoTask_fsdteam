@@ -5,6 +5,12 @@ mixin my-svg
       line.svg-color(x1="0" y1="30" x2="52" y2="82" stroke="black" stroke-width="20")
       line.svg-color(x1="52" y1="68" x2="90" y2="30" stroke="black" stroke-width="20")
 
+//- горизонтальная линич
+mixin line-svg
+  .line-position
+    svg(viewBox="0 0 1 30" width="1" height="30")
+      line.line-color(x1="1" y1="30" x2="1" y2="0" stroke="gray" stroke-width="1")
+
 //- меню в заголовке
 mixin nav-list
   ul.nav__list
@@ -21,3 +27,11 @@ mixin nav-list
     li.nav__item
       a(href="./tassel.html").nav__link= "соглашения"
       +my-svg
+
+//- кнопки войти и зарегистрироваться
+mixin form
+  form.form
+    button.button
+      .button__title= "войти"
+    button.button.button_color_purple.show
+      .button__title.button__title_color_white= "зарегистрироваться"

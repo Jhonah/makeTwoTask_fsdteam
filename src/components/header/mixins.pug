@@ -5,7 +5,7 @@ mixin my-svg
       line.svg-color(x1="0" y1="30" x2="52" y2="82" stroke="black" stroke-width="20")
       line.svg-color(x1="52" y1="68" x2="90" y2="30" stroke="black" stroke-width="20")
 
-//- горизонтальная линич
+//- горизонтальная линия
 mixin line-svg
   .line-position
     svg(viewBox="0 0 1 30" width="1" height="30")
@@ -13,7 +13,7 @@ mixin line-svg
 
 //- меню в заголовке
 mixin nav-list
-  ul.nav__list
+  ul.nav
     li.nav__item.nav__item--current
       a(href="./index.html", target="_self").nav__link.active= "о"
         span.nav__link_text-transform_none= " нас"

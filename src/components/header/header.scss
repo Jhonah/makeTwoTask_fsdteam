@@ -1,51 +1,25 @@
-.nav {
-    //border-top: 1px solid $mainFontColor;
-    //border-bottom: 1px solid $mainFontColor;
+.header {
     height: 70px;
-    //margin-top: 200px;
 }
 
-.nav-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 100%;
-    height: inherit;
-
+.header__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    content: url(Logo.svg);
     padding: 15px 0;
 }
 
-.top-menu {
+.header__top-menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex: 0 0 66.3448275862%;
-    //height: 34px;
 }
 
-.nav__list {
-    //height: inherit;
-    //flex: 0 0 447px;
-    display: flex;
-    //vertical-align: text-bottom;
-    /*flex-direction: row;
-    justify-content: space-between;*/
-    //align-items: center;
-    font-family: 'Montserrat', serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17.07px;
+.nav {
+    display: flex;    
     text-transform: capitalize;
     color: $darkShade50;
-    //letter-spacing: 0.05em;
-    //word-spacing: 0.5rem;
-    //padding-right: 1.25rem;
 }
 
 .nav__item {
@@ -92,10 +66,10 @@
 }
 
 .user-name {
-    font-family: 'Montserrat', serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17.07px;
+    //font-family: 'Montserrat', serif;
+    //font-weight: 400;
+    //font-size: 14px;
+    //line-height: 17.07px;
     text-transform: capitalize;
     color: $darkShade50;
 }
@@ -132,7 +106,7 @@ button {
     }
 
 .button__title {
-    font-family: 'Montserrat', serif;
+    //font-family: 'Montserrat', serif;
     font-weight: 700;
     font-size: 12px;
     line-height: 14.63px;

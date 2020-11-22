@@ -2,13 +2,13 @@ include mixins
 
 header
   .container
-    nav.nav
-      .nav-wrapper
-          img.logo
-          .top-menu
-            //- include mixins
+    .header
+      .header__wrapper
+        img.logo
+        .header__top-menu
+          nav
             +nav-list
-            +line-svg
-            .user-name= "Юлий Цезарь"
+          +line-svg
+          .user-name= "Юлий Цезарь"
             //- +form
             //- .user-logged= "user"

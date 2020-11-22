@@ -2,7 +2,7 @@
 @import 'utils/vars';
 //@import 'utils/mixins';
 @import 'utils/fonts';
-//@import 'utils/reset';
+@import 'utils/reset';
 
 html {
     line-height                 : $mainLineHeight;
@@ -11,11 +11,11 @@ html {
     height                      : 100%;
 
     @media screen and (max-width: $macAirDesktop) {
-        font-size: 16px;
+        //font-size: 16px;
     }
 
     @media screen and (max-width: $desktopWidth) {
-        font-size: 15px;
+        //font-size: 15px;
     }
 
     @media screen and (max-width: $tableWidth) {
@@ -47,15 +47,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    text-decoration             : none;
-    //color                       : #2C2C2B;
-    //text-transform              : capitalize;
-}
-
-ul, li {
-    margin                      : 0;
-    padding                     : 0;
-    list-style-type             : none;
+    //text-decoration             : none;
+    color                       : $mainFontColor;
+    text-transform              : capitalize;
 }
 
 section, .section {
@@ -76,6 +70,10 @@ section, .section {
 }
 
 .wrapper {
+    /*width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    height: inherit;*/
 }
 
 .content-wrapper {
@@ -106,6 +104,12 @@ section, .section {
     }
 }
 
+.logo {
+    content: url(Logo.svg);
+    //padding: 15px 0;
+}
+
 // Components
 @import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
 @import "../components/store/store.scss";

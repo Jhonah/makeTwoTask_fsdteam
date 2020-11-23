@@ -2,14 +2,19 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     //grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    grid-gap: 3vw;
+    grid-gap: 3.1rem;
     padding: 104px 0 100px 0;
 
     &__descr {
-        width: 18vw;
+        width: 18.6rem;
         color: $darkShade75;
         line-height: 1.75;
         padding: 15px 0;
+    }
+
+    &__form {
+        width: inherit;
+        height: 44px;
     }
 
     &__email {
@@ -18,26 +23,37 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
-        padding: 1.5rem 1rem;
+        padding: 0.7rem 1rem;
         border-radius: 4px;
         border: 1px solid $darkShade25;
-        //width: 260px;
-        height: 44px;
+        box-sizing: border-box !important;
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        z-index: -1;
     }
 
     &__btn {
         display: inline-block;
         background: transparent;
         color: inherit;
-        width: 44px;
-        height: 44px;
+        //width: 44px;
+        height: inherit;
         transition: all 200ms ease-in;
         cursor: pointer;
+        z-index: 1;
+
         &--inside {
             margin-left: -96px;
         }
     }
 }
+
+.arrow-svg {
+    //width: 44;
+    //height: 44;
+}
+
 .nav {
     &_direction_column {
         display: flex;

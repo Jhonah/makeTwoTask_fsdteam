@@ -1,3 +1,9 @@
+mixin arrow-svg
+  svg.arrow-svg(viewBox="0 0 100 100" width="44" height="44")
+   line(x1="45" y1="35" x2="62" y2="51" stroke="purple" stroke-width="4")
+   line(x1="45" y1="65" x2="62" y2="49" stroke="purple" stroke-width="4")
+   line(x1="30" y1="50" x2="60" y2="50" stroke="purple" stroke-width="4")
+
 footer
   .container
     .footer
@@ -31,4 +37,5 @@ footer
         p.footer__descr= "Получайте специальные предложения и новости сервиса"
         form.footer__form
           input(class="footer__email" type="text" id="email" name="email" placeholder="Email")
-          button.footer__btn(type="button")= "Send"
+          button.footer__btn(type="button")
+            +arrow-svg

@@ -2,14 +2,29 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     //grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: calc(5% - 2rem);//2.85rem 3.1rem 2.85rem 3.1rem;
+    column-gap: 3.5%; //calc(2.7vw); //2.85rem 3.1rem;
     padding: 104px 0 100px 0;
 
+    &__logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     &__descr {
-        width: 18.6vw;
+        width: calc(18vw + 0.812px); //18vw(size width screen 1440px)=259.188px
         color: $darkShade75;
-        line-height: 1.75;
-        padding: 15px 0;
+        line-height: 1.71428;
+        margin: 20px 0;
+        outline: none;
+
+        &_height {
+            height: 5vw;
+        }
+
+        &_margin_bottom-21 {
+            margin-bottom: 21px;
+        }
     }
 
     &__form {
@@ -29,7 +44,7 @@
         border-radius: 4px;
         border: 1px solid $darkShade25;
         box-sizing: border-box !important;
-        width: 18.6vw;
+        width: 18vw;
         height: inherit;
         position: absolute;
         //z-index: -1;
@@ -61,40 +76,40 @@
             //height: inherit;
         }
     }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        //text-transform: capitalize;
+        height: 168px;
+        padding-top: 5px;
+
+        &_padding-bottom_35 {
+            padding-bottom: 35px;
+        }
+
+        &_justify-content_none {
+            justify-content: start;
+        }
+    }
+
+    &__link {
+        color: $darkShade50;
+        //text-transform: none;
+
+        &_header {
+            color: $darkShade100;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 14.63px;
+            text-transform: uppercase;
+        }
+    }
 }
 
 .arrow-svg {
     //width: 44;
     //height: 44;
     stroke: $purple;
-}
-
-.nav {
-    &_direction_column {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 168px;
-        padding-top: 5px;
-    }
-
-    &_padding-bottom_35 {
-        padding-bottom: 35px;
-    }
-
-    &_justify-content_none {
-        justify-content: start;
-    }
-
-    &__link_header {
-        color: $darkShade100;
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 14.63px;
-        text-transform: uppercase;
-    }
-
-    &__link {
-        color: $darkShade50;
-    }
 }

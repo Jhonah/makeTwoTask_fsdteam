@@ -3,6 +3,12 @@ mixin arrow-svg
    line.arrow-svg(x1="45" y1="35" x2="62" y2="51" stroke="purple" stroke-width="4")
    line.arrow-svg(x1="45" y1="65" x2="62" y2="49" stroke="purple" stroke-width="4")
    line.arrow-svg(x1="30" y1="50" x2="60" y2="50" stroke="purple" stroke-width="4")
+mixin nav(title, ...items)
+  nav.footer__nav
+        a.footer__link_header(href="#")= title
+          each item in items
+            - let str = item.charAt(0).toUpperCase() + item.slice(1)
+            a.footer__link(href="#")= str
 
 footer
   .container
@@ -10,24 +16,9 @@ footer
       .footer__logo
         img.logo
         p.footer__descr.footer__descr_height= "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»"
-      nav.footer__nav
-        a.footer__link_header(href="#")= "навигация"
-        - let list = ["о нас","новости","служба поддержки","услуги"]
-          each item in list
-            - let str = item.charAt(0).toUpperCase() + item.slice(1)
-            a.footer__link(href="#")= str
-      nav.footer__nav
-        a.footer__link_header(href="#")= "о нас"
-        - list = ["о сервисе","наша команда","вакансии","инвесторы"]
-          each item in list
-            - let str = item.charAt(0).toUpperCase() + item.slice(1)
-            a.footer__link(href="#")= str
-      nav.footer__nav.footer__nav_padding-bottom_35
-        a.footer__link_header(href="#")= "служба поддержки"
-        - list = ["соглашения","сообщества","связь с нами"]
-          each item in list
-            - let str = item.charAt(0).toUpperCase() + item.slice(1)
-            a.footer__link(href="#")= str
+      +nav("навигация","о нас","новости","служба поддержки","услуги")
+      +nav("о нас","о сервисе","наша команда","вакансии","инвесторы")
+      +nav("служба поддержки","соглашения","сообщества","связь с нами")
       nav.footer__nav.footer__nav_justify-content_none
         a.footer__link_header(href="#")= "подписка"
         p.footer__descr.footer__descr_margin_bottom-21= "Получайте специальные предложения и новости сервиса"

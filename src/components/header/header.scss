@@ -1,88 +1,106 @@
 .header {
-    height: 70px;
-}
-
-.header__wrapper {
+    //height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    text-transform: capitalize;
+
+    &__wrapper {
+    }
+
+    &__top-menu {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        //grid-template-rows: 1fr;
+        column-gap: 20px;
+        //justify-content: flex-end;
+        //flex: 0 0 66.3448275862%;
+        //flex: 0 0 770px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__svg-position {
+        width: 24px;
+        height: 19px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //vertical-align: text-bottom;
+    }
+
+    &__svg-color {
+        //color: $darkShade50;
+        stroke: $darkShade50;
+    }
+
+    &__line-position {
+        //margin-right: 20px;
+        //width: 1px;
+        //display: inline;
+    }
+
+    &__line-color {
+        stroke: $mainFontColor;
+    }
+
+    &__user-name {
+        //font-family: 'Montserrat', serif;
+        //font-weight: 400;
+        //font-size: 14px;
+        //line-height: 17.07px;
+        color: $darkShade50;
+        //word-wrap: normal;
+        white-space: nowrap; // отмена переноса строки
+        //display: inline;
+    }
 }
 
-.header__top-menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex: 0 0 66.3448275862%;
-}
 
 .nav {
-    display: flex;    
-    //text-transform: capitalize;
-    color: $darkShade50;
-}
-
-.nav__item {
-    color: $darkShade50;
-    padding-right: 1.25rem;
     display: flex;
-    //flex-direction: row;
-    //align-items: flex-start;
-}
-
-.nav__item--current {
-    font-weight: 700;
-    color: $darkShade75;
-}
-
-.nav__link {
-    color: inherit;
-}
-
-.nav__link_text-transform_none {
-    text-transform: none;
-}
-
-.svg-position {
-    width: 24px;
-    height: 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    //vertical-align: text-bottom;
-}
-
-.svg-color {
-    //color: $darkShade50;
-    stroke: $darkShade50;
-}
-
-.line-position {
-    margin-right: 20px;
-}
-
-.line-color {
-    stroke: 1F2041;
-}
-
-.user-name {
-    //font-family: 'Montserrat', serif;
-    //font-weight: 400;
-    //font-size: 14px;
-    //line-height: 17.07px;
+    //grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
     text-transform: capitalize;
     color: $darkShade50;
+
+    &__item {
+        //color: $darkShade50;
+        display: flex;
+        //padding-right: 20px;
+        //flex-direction: row;
+        //align-items: flex-start;
+    }
+
+    &__item--current {
+        font-weight: 700;
+        color: $darkShade75;
+    }
+
+    &__link {
+        //display: flex;
+        //justify-content: space-between;
+        color: inherit;
+        &_text-transform_none {
+            text-transform: none;
+            //white-space: nowrap;
+        }
+    }
 }
+
 
 .form {
-    width: 39.5%;
+    //width: 39.5%;
     height: 34px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    //grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    //align-items: center;
+    //justify-content: space-between;
 }
 
-button {
+button, input {
     font-size: 100%;
     font-family: inherit;
     border: 0;
@@ -93,27 +111,27 @@ button {
 }
 
 .button {
-    height: 100%;
-    padding: .5625rem 1.25rem .625rem;
+    //width: 100%;
+    //height: 100%;
+    padding: 9px 20px 10px 19px;//.5625rem 1.25rem .625rem;
     border-color: linear-gradient(180deg, $purple 0%, $neo 100%);
     border-radius: 22px;
     border: 2px solid;
-}
 
-    .button_color_purple {
+    &_color_purple {
         background: linear-gradient(180deg, $purple 0%, $neo 100%);
         //border-radius: 22px;
         border: none;
     }
+    &__title {
+        //font-family: 'Montserrat', serif;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 14.63px;
+        text-transform: uppercase;
 
-.button__title {
-    //font-family: 'Montserrat', serif;
-    font-weight: 700;
-    font-size: 12px;
-    line-height: 14.63px;
-    text-transform: uppercase;
-}
-
-    .button__title_color_white {
-        color: #fff;
+        &_color_white {
+            color: #fff;
+        }
     }
+}

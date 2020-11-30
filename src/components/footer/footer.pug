@@ -1,8 +1,11 @@
+//- стрелочка для кнопки отправки email
 mixin arrow-svg
   svg(viewBox="0 0 100 100" width="44" height="44")
    line.arrow-svg(x1="45" y1="35" x2="62" y2="51" stroke="purple" stroke-width="4")
    line.arrow-svg(x1="45" y1="65" x2="62" y2="49" stroke="purple" stroke-width="4")
    line.arrow-svg(x1="30" y1="50" x2="60" y2="50" stroke="purple" stroke-width="4")
+
+//- script навигации
 mixin nav(title, ...items)
   nav.footer__nav
         a.footer__link_header(href="#")= title
@@ -11,7 +14,7 @@ mixin nav(title, ...items)
             a.footer__link(href="#")= str
 
 footer
-  .container
+  .container.container_border-bottom
     .footer
       .footer__logo
         img.logo

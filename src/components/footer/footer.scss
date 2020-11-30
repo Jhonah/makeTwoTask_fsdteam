@@ -1,3 +1,7 @@
+.container_border-bottom {
+    border-bottom: 1px solid $darkShade10;
+}
+
 .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -98,7 +102,6 @@
     &__link {
         color: $darkShade50;
         //text-transform: none;
-
         &_header {
             color: $darkShade100;
             font-weight: 700;

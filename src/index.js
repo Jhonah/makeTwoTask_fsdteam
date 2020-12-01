@@ -1,7 +1,7 @@
-// JS
-//import './js/'
+/* JS */
+import './components/footer/footer.js'
 
 // SCSS
 import './scss/main.scss'
 
-console.log("hello, world and monsters");
+//console.log("hello, world and monsters");

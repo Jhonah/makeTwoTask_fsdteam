@@ -86,7 +86,7 @@ section, .section {
     position                    : relative;
     margin                      : 0 auto;
     padding                     : 0 15px 0 15px;
-    max-width                   : 75%;//1440px;
+    max-width                   : 75%; //1440px;
 
     @media screen and (max-width: $macAirDesktop) {
         max-width: 1190px;
@@ -99,6 +99,7 @@ section, .section {
     }
 
     @media screen and (max-width: $tableWidth) {
+        max-width: 560px; //72.9166666667%
     }
 
     @media screen and (max-width: $phoneWidth) {

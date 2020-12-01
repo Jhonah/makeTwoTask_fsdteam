@@ -51,12 +51,8 @@
     }
 
     &__btn {
-        //display: inline-block;
         background: transparent;
-        //color: inherit;
-        //width: 44px;
         height: inherit;
-        //transition: all 200ms ease-in;
         cursor: pointer;
         box-sizing: border-box;
 
@@ -86,7 +82,6 @@
         }
     }
 
-
     &__link {
         color: $darkShade50;        
         &_header {
@@ -109,17 +104,19 @@
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: $tableWidth) {
+        height: 100%;
+        flex-direction: column;
+        margin: 120px 0;
+        grid-gap: 20px;
+    }
+
     &__title {
         color: $darkShade75;
     }
 
     &__social-networks {
-        //content: url(facebook.svg);
-        //content: url(twitter.svg);
-        //content: url(insta.svg);
-        //padding: 15px 0;
         display: flex;
-        flex-direction: row;
         column-gap: 20px;
     }
 

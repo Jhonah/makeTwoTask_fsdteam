@@ -28,11 +28,11 @@ html {
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: $mainFont;
+    margin                      : 0;
+    padding                     : 0;
+    font-family                 : $mainFont;
     font-size                   : $mainFontSize;
-    font-weight: $mainFontWeight;
+    font-weight                 : $mainFontWeight;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     //background-color: #E5E5E5;

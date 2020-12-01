@@ -13,8 +13,8 @@ mixin nav(title, ...items)
             - let str = item.charAt(0).toUpperCase() + item.slice(1)
             a.footer__link(href="#")= str
 
-footer
-  .container.container_border-bottom
+footer.border-bottom
+  .container
     .footer
       .footer__logo
         img.logo
@@ -24,8 +24,15 @@ footer
       +nav("служба поддержки","соглашения","сообщества","связь с нами")
       nav.footer__nav.footer__nav_justify-content_none
         a.footer__link_header(href="#")= "подписка"
-        p.footer__descr.footer__descr_margin_bottom-21= "Получайте специальные предложения и новости сервиса"
+        p.footer__descr.footer__descr_margin_bottom= "Получайте специальные предложения и новости сервиса"
         form.footer__form
           input(class="footer__email" type="text" id="email" name="email" placeholder="Email")
           button.footer__btn.footer__btn--inside(type="button")
             +arrow-svg
+.container
+  .copyright
+    .copyright__title= "Copyright © 2018 Toxin отель. Все права зачищены."
+    ul.copyright__social-networks
+      li.copyright__content
+      li.copyright__content
+      li.copyright__content

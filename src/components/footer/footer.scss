@@ -1,4 +1,4 @@
-.container_border-bottom {
+.border-bottom {
     border-bottom: 1px solid $darkShade10;
 }
 
@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     //grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 3.5%; //calc(2.7vw); //2.85rem 3.1rem;
-    padding: 104px 0 100px 0;
+    padding: /*104px*/ 0 0 100px 0;
 
     &__logo {
         display: flex;
@@ -26,8 +26,8 @@
             height: 5vw;
         }
 
-        &_margin_bottom-21 {
-            margin-bottom: 21px;
+        &_margin_bottom {
+            margin-bottom: 23px;
         }
     }
 
@@ -39,10 +39,6 @@
     }
 
     &__email {
-        font-family: 'Montserrat', serif;
-        color: $darkShade25;
-        font-weight: 400;
-        font-size: 14px;
         line-height: 24px;
         padding: 0.7rem 3rem 0.7rem 1rem;
         border-radius: 4px;
@@ -67,18 +63,10 @@
         &--inside {
             //position: relative;
             z-index: 1;
-            //margin-left: -96px;
-            //right: 0;
         }
 
-        &:hover {
-            //background: $purple;
-            //height: inherit;
-        }
-
-        &:active {
-            //height: inherit;
-        }
+        &:hover {}
+        &:active {}
     }
 
     &__nav {
@@ -87,10 +75,10 @@
         justify-content: space-between;
         //text-transform: capitalize;
         height: 168px;
-        padding-top: 5px;
+        margin-top: 5px;
 
         &:nth-child(3n+1) {
-            padding-bottom: 35px;
+            padding-bottom: 37px;
         }
 
         &_justify-content_none {
@@ -100,8 +88,7 @@
 
 
     &__link {
-        color: $darkShade50;
-        //text-transform: none;
+        color: $darkShade50;        
         &_header {
             color: $darkShade100;
             font-weight: 700;
@@ -113,7 +100,45 @@
 }
 
 .arrow-svg {
-    //width: 44;
-    //height: 44;
     stroke: $purple;
+}
+
+.copyright {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        color: $darkShade75;
+    }
+
+    &__social-networks {
+        //content: url(facebook.svg);
+        //content: url(twitter.svg);
+        //content: url(insta.svg);
+        //padding: 15px 0;
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+
+    &__content {
+        content: url(facebook.svg);
+        width: 24px;
+        padding: 1px;
+
+        &:nth-child(1) {
+            content: url(twitter.svg);
+            padding: 0;
+        }
+
+        &:nth-child(3n) {
+            content: url(insta.svg);
+        }
+    }
+}
+
+::placeholder {
+    color: $darkShade25;
 }

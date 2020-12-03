@@ -12,3 +12,5 @@ function go() {
       //console.log(`window was resized ${clientWidth}`);
     }
 }
+
+//document.querySelector('.show').sty

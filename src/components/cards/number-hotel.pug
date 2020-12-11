@@ -1,0 +1,9 @@
+//- кнопки войти и зарегистрироваться
+mixin buttons(str)
+  form.form
+    //- input.button.button__title(type="button" value="войти")
+    button.button.button_color_purple
+      .button__title.button__title_color_white= str
+
+div= "Найдём номера под ваши пожелания"
++buttons("подобрать номер")

@@ -1,9 +1,18 @@
-//- кнопки войти и зарегистрироваться
+//- кнопки
 mixin buttons(str)
   form.form
     //- input.button.button__title(type="button" value="войти")
     button.button.button_color_purple
       .button__title.button__title_color_white= str
+mixin btnBorder(str)
+  form.form
+    button.button.button__title= str
+mixin btnBorderOpacity(str)
+  form.form
+    button.button.button__opacity
+      .button__title= str
 
-div= "Найдём номера под ваши пожелания"
-+buttons("подобрать номер")
++btnBorderOpacity("click me")
++btnBorder("click me")
++buttons("click me")
++buttons("перейти к оплате")
